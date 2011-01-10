@@ -15,7 +15,10 @@ describe ItunesConnect::Commands do
 
   describe 'for_name' do
     before(:each) do
-      @clip = mock(:null_object => true)
+      @clip = mock(:clip)
+      @clip.stub!(:opt).and_return(nil)
+      @clip.stub!(:req).and_return(nil)
+      @clip.stub!(:flag).and_return(nil)
     end
 
     it 'should return Download for download' do

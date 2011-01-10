@@ -2,7 +2,12 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe ItunesConnect::Commands::Report do
   before(:each) do
-    @cmd = ItunesConnect::Commands::Report.new(mock(:null_object => true))
+    @clip = mock(:clip)
+    @clip.stub!(:opt).and_return(nil)
+    @clip.stub!(:req).and_return(nil)
+    @clip.stub!(:flag).and_return(nil)
+
+    @cmd = ItunesConnect::Commands::Report.new(@clip)
     @defaults = {
       :db => '/tmp/store.db',
       :summarize? => false,

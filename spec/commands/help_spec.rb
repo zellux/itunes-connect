@@ -3,7 +3,12 @@ require "clip"
 
 describe ItunesConnect::Commands::Help do
   before(:each) do
-    @cmd = ItunesConnect::Commands::Help.new(mock(:null_object => true))
+    @clip = mock(:clip)
+    @clip.stub!(:opt).and_return(nil)
+    @clip.stub!(:req).and_return(nil)
+    @clip.stub!(:flag).and_return(nil)
+
+    @cmd = ItunesConnect::Commands::Help.new(@clip)
   end
 
   describe 'with valid execution arguments' do

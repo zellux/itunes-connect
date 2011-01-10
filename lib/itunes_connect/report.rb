@@ -12,17 +12,17 @@ class ItunesConnect::Report
   # <tt>:install</tt>.
   attr_reader :data
 
-  # Give me an +IO+-like object (one that responds to the +each+
+  # Give me an +IO+-like object (one that responds to the +each_line+
   # method) and I'll parse that sucker for you.
   def initialize(input)
     @data = Hash.new { |h,k| h[k] = { }}
-    input.each do |line|
+    input.each_line do |line|
       line.chomp!
       next if line =~ /^(Provider|$)/
       tokens = line.split(/\s+/)
       country = tokens[11]
       count = tokens[6].to_i
-      @data[country][:date] = Date.parse(tokens[8])
+      @data[country][:date] = Date.strptime(tokens[8], "%m/%d/%Y")
       case tokens[5].to_i
       when 7
         @data[country][:upgrade] = count

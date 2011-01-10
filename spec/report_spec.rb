@@ -4,7 +4,7 @@ describe ItunesConnect::Report do
   describe 'when constructed with raw input' do
     before(:each) do
       @report = ItunesConnect::Report.new(read_fixture('fixtures/report.txt'))
-      @today = Date.parse('8/31/2009')
+      @today = Date.strptime('8/31/2009', "%m/%d/%Y")
     end
 
     it 'should produce a correct "data" member field' do
@@ -16,7 +16,7 @@ describe ItunesConnect::Report do
     end
 
     it 'should yield each country with "each"' do
-      the_day = Date.parse('8/31/2009')
+      the_day = @today
       all = @report.sort_by { |r| r.country }
       all[0].country.should == 'AR'
       all[0].install_count.should == 0

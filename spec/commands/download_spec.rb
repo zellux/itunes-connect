@@ -2,7 +2,12 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe ItunesConnect::Commands::Download do
   before(:each) do
-    @cmd = ItunesConnect::Commands::Download.new(mock(:null_object => true),
+    @clip = mock(:clip)
+    @clip.stub!(:opt).and_return(nil)
+    @clip.stub!(:req).and_return(nil)
+    @clip.stub!(:flag).and_return(nil)
+
+    @cmd = ItunesConnect::Commands::Download.new(@clip,
                                             mock(:username => nil,
                                                  :password => nil,
                                                  :database => nil))
@@ -55,7 +60,7 @@ describe ItunesConnect::Commands::Download do
 
     describe 'and the :db option is specified' do
       it 'should import the results into the DB' do
-        t = Date.parse('8/31/2009')
+        t = Date.strptime('8/31/2009', "%m/%d/%Y")
         @connection.should_receive(:get_report) do |date, io, report|
           io << read_fixture('fixtures/report.txt')
           io.flush

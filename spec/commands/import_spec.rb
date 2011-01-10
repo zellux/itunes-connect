@@ -4,7 +4,12 @@ require "tempfile"
 describe ItunesConnect::Commands::Import do
 
   before(:each) do
-    @cmd = ItunesConnect::Commands::Import.new(mock(:null_object => true),
+    @clip = mock(:clip)
+    @clip.stub!(:opt).and_return(nil)
+    @clip.stub!(:req).and_return(nil)
+    @clip.stub!(:flag).and_return(nil)
+
+    @cmd = ItunesConnect::Commands::Import.new(@clip,
                                           mock(:username => nil,
                                                :password => nil,
                                                :database => nil))
@@ -19,7 +24,7 @@ describe ItunesConnect::Commands::Import do
     end
 
     it 'should add a record to the store for each row of data' do
-      t = Date.parse('8/31/2009')
+      t = Date.strptime('8/31/2009', "%m/%d/%Y")
       @store.should_receive(:add).with(t, 'GB', 0, 1)
       @store.should_receive(:add).with(t, 'AR', 0, 1)
       @store.should_receive(:add).with(t, 'US', 1, 3)
