@@ -8,10 +8,10 @@ module ItunesConnect::Commands
       c.opt('c', 'country',
             :desc => 'A two-letter country code to filter results with')
       c.opt('f', 'from', :desc => 'The starting date, inclusive') do |f|
-        Date.parse(f)
+        Date.strptime(f, "%m/%d/%Y")
       end
       c.opt('t', 'to', :desc => 'The ending date, inclusive') do |t|
-        Date.parse(t)
+        Date.strptime(t, "%m/%d/%Y")
       end
       c.flag('s', 'summarize', :desc => 'Summarize results by country code')
       c.flag('n', 'no-header', :desc => 'Suppress the column headers on output')
