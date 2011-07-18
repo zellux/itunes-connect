@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <title>iTunes Connect</title>
+    
+<link href="itunes_icloud_legal_files/global.css" type="text/css" rel="STYLESHEET">
+
+    
+<script src="itunes_icloud_legal_files/global_002.js" type="text/javascript"></script>
+
+<script src="itunes_icloud_legal_files/global.js" type="text/javascript"></script>
+<script src="itunes_icloud_legal_files/itunes-connect-ibookstore.js" type="text/javascript"></script>
+
+  </head>
+  <body leftmargin="0" topmargin="0" rightmargin="0" bgcolor="#FFFFFF" marginheight="0" marginwidth="0">
+    
+<p>
+  
+
+
+    </p><table align="center" border="0" cellpadding="4" cellspacing="0" width="99%">
+      <tbody><tr>
+        <td>
+
+          <table align="center" border="0" cellpadding="0" cellspacing="0" width="980">
+	<tbody><tr>
+    <td colspan="3">
+      <table style="margin-bottom: 10px;" width="100%">
+        <tbody><tr>
+          <td style="width: 179px;" align="left"><a href="https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/wo/2.0.0.9.1"><img src="itunes_icloud_legal_files/itc-masthead.png" alt="iTunes Connect" border="0" height="23" width="173"></a></td>
+          
+          
+          <td style="text-align: right;"><form name="signOutForm" method="post" action="/WebObjects/iTunesConnect.woa/wo/2.0.0.9.5.1.0">
+          
+    <font color="gray">
+        
+        login information
+    </font>
+    <input value="Sign Out" type="submit">
+</form>
+</td>
+          
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+  
+
+            <tr>
+              <td colspan="4">
+              
+              <span id="headerMessagesUpdateContainer" class="lcAjaxContainer" action="/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.1" errorid="ajaxContainerError">
+              
+              
+
+              
+
+              
+              
+              </span>
+              
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                
+
+	
+	    <form name="mainForm" enctype="multipart/form-data" method="post" id="mainForm" action="/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1">
+	        <table border="0" cellpadding="0" cellspacing="0" width="980">
+<tbody><tr>
+    <td width="8"><img src="itunes_icloud_legal_files/wrapper_topl.png" alt="" height="51" width="8"></td>
+        <td class="header_text" align="center" background="itunes_icloud_legal_files/wrapper_top.png" height="51" width="*">
+        <span id="lcBoxWrapperHeaderUpdateContainer" class="lcAjaxContainer" action="/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.5" errorid="ajaxContainerError">
+          <span class="wrapper-topright-button">
+</span>
+          <span class="upload-app-button">
+</span>
+          <p>"iCloud" Legal Information</p>
+        </span>
+    </td>
+    <td width="8"><img src="itunes_icloud_legal_files/wrapper_topr.png" alt="" height="51" width="8"></td>
+
+</tr>
+<tr>
+    <td background="itunes_icloud_legal_files/wrapper_10.png" width="8"></td>
+    <td bgcolor="#C9C9C9">
+      
+	            
+                    <table class="lcbox" cellpadding="0" cellspacing="0">
+    <tbody><tr valign="top">
+        <td background="itunes_icloud_legal_files/wrapper_17.png" height="12" valign="top" width="4"><img src="itunes_icloud_legal_files/wrapper_11.png" alt="" height="12" width="4"></td>
+        <td rowspan="2" style="background: url(&quot;https://itc.mzstatic.com/itc/images/wrapper_12.png&quot;) repeat-x scroll left top white;" valign="top">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                
+                <tbody><tr>
+                    <td>
+		                  
+                        
+<div class="legal-quest">
+  <div class="legal-quest-text">
+    Do you have any apps that may have a legal issue?
+  </div>
+  <div class="legal-quest-choice">
+    <span id="questionContainer" class="lcAjaxContainer" action="/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.11.1.1.11.1.1" errorid="ajaxContainerError"><table class="export-comp-radios" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+      <td><span style="font-size:14px;font-weight: bold;">Yes</span></td>
+      <td><input onclick="updateQuestion();" id="stateradio" value="true" name="hasLegalIssues" type="radio"></td>
+      <td width="20">&nbsp;</td>
+      <td><span style="font-size:14px;font-weight: bold;">No</span></td>
+      <td><input onclick="updateQuestion();" value="false" name="hasLegalIssues" type="radio"></td>
+  </tr>
+</tbody></table>
+</span>
+  </div>
+</div>
+<div id="legal-quest-list" style="display: none;">
+<span id="appLegalContainer" class="lcAjaxContainer" action="/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.11.1.1.11.1.3" errorid="ajaxContainerError">
+
+  <div class="app-info-container itc-2-app" style="margin-top: 0">
+    <div class="formfield-wrapper">
+  <div class="top"></div>
+    <div class="middle">
+    
+      <p class="heading">Select each app that may have a legal issue. 
+You will be presented with a list of versions to choose from for each 
+app that you select. Any app versions you choose will become unavailable
+ to be restored and/or downloaded as a previous purchase by App Store 
+customers. Once you have made your selections, click Submit.</p>
+      <div>
+        <script language="Javascript">
+var createList_appList = function() {
+    
+        var reorderEnabled = false;
+    
+    
+
+    
+    
+        var preventLastRowDeletion = false;
+    
+    
+    
+    
+        var searchEnabled = false;
+    
+    
+    var arguments = {
+        'ajaxListId' : 'appList',
+        'reorderingEnabled' : reorderEnabled,
+        'maxNumberRows' : 2147483647,
+        'pageSize' : 50,
+        'preventLastRowDeletion' : preventLastRowDeletion,
+        'searchEnabled' : searchEnabled,
+        'updateUrl' : '/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.11.1.1.11.1.3.1.1.1.1.21',
+        'deleteUrl' : '/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.11.1.1.11.1.3.1.1.1.1.23',
+        'viewRowUrl' : '/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.11.1.1.11.1.3.1.1.1.1.25',
+        'itemActionUrl' : '/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.11.1.1.11.1.3.1.1.1.1.27',
+        'pageNumberActionUrl' : '/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.11.1.1.11.1.3.1.1.1.1.29',
+        'radioSelectionUrl' : '/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.11.1.1.11.1.3.1.1.1.1.31',
+        'checkboxSelectionUrl' : '/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.11.1.1.11.1.3.1.1.1.1.33',
+        'customActionUrl' : '/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.11.1.1.11.1.3.1.1.1.1.35',
+        'sortColumnActionUrl' : '/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.11.1.1.11.1.3.1.1.1.1.37',
+        'searchActionUrl' : '/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.11.1.1.11.1.3.1.1.1.1.39',
+        'searchFieldBackgroundText' : 'Keyword Filter',
+        'useServerSideOnly' : true,
+        'searchQueueTimeout' : 250,
+        'showSpinnerOnLightboxLoad' : true
+    };
+    
+    var list = new LCAjaxList(arguments);
+    list.initialize();
+    
+}
+
+document.observe("dom:loaded", createList_appList);
+
+</script>
+
+    
+    
+    <script language="javascript">
+        // move this to be at the bottom of the body after any other forms so that the lightbox panel is not wrapped by anything else.
+            document.observe("dom:loaded", function() {
+                var lightboxElement = $('appListLightboxLightboxWrapper').remove();
+                $(document.body).appendChild(lightboxElement);
+            });
+    </script>
+    
+    
+    
+
+<div id="appListContainer" class="ajaxListBox">
+
+	<div class="ajaxListConfirmDelete" style="display:none;">
+	                <div class="tool-tip-beak tool-tip-beak-right">&nbsp;</div>
+	                <div class="tool-tip-top">&nbsp;</div>
+	                <div class="tool-tip-main">
+	                    <p style="margin:0 0px 10px 25px;">Delete this row?</p>
+	                    <p style="margin:0 25px;">
+	                        <span style="margin:5px 0 0 0px"><img src="itunes_icloud_legal_files/btn-cancel-small-white-gc.png" class="ajaxListCancelDeleteButton"></span>
+	                        <span style="margin:5px 0 0 75px"><img src="itunes_icloud_legal_files/btn-delete-small-red-gc.png" class="ajaxListConfirmDeleteButton"></span>
+	                    </p>
+	                </div>
+	                <div class="tool-tip-bottom">&nbsp;</div>
+	</div>
+
+    <div id="appList_errorbox" style="display:none;" class="lcAjaxErrorMessageBox">
+    <div class="lcAjaxErrorMessage"><div id="appList_errorbox-message"></div><div style="width=100%;display:inline-block;float:right;padding:3px;"><a href="javascript:Effect.BlindUp('appList_errorbox',%20{%20duration:%200.5%20});">Okay</a></div></div></div>
+
+    
+    
+    
+    
+    <ul class="ajaxListHeaderUL">
+            <li class="ajaxListHeaderLI"><div class="ajaxListHeaderDiv">
+                
+                    
+                    
+                       <div style="float:left;" class="ajaxListColumnHeader ajaxListColumnHeaderInternal ajaxListColumn_1">
+                    
+                    
+                    
+                     
+                        
+                        &nbsp;
+                    </div>
+                    
+                    
+                    
+                       <div style="float:left;" class="ajaxListColumnHeader ajaxListColumnHeaderInternal ajaxListColumn_2 ajaxListColumnSortable ajaxListColumnSorted">
+                    
+                    
+                    
+                    App Name &nbsp;&nbsp;&nbsp;<div class="ajaxListSort  ajaxListSortUp"></div>
+                        
+                        &nbsp;
+                    </div>
+                    
+                    
+                    
+                    
+                       <div style="display:inline;" class="ajaxListColumnHeader ajaxListColumnHeaderLast ajaxListColumn_3 ajaxListColumnSortable">
+                    
+                    
+                    Apple ID &nbsp;&nbsp;&nbsp;<div class="ajaxListSort "></div>
+                        
+                        &nbsp;
+                    </div>
+                    
+            </div></li>
+       </ul>
+
+        <span id="appListListRefreshContainerId" class="lcAjaxContainer" action="/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.11.1.1.11.1.3.1.1.1.1.71" errorid="ajaxContainerError">
+               <ul id="appList" class="ajaxListUL">
+                    <li class="ajaxListEmptyRow">
+                        <div style="display: none;" class="ajaxListEmptyRowDiv emptyListMessage">
+                        You do not currently have any versions of this app available for rights management.
+                        </div>
+                    </li>
+                    <li class="ajaxListEmptyRow">
+                        <div style="display: none;" class="ajaxListEmptyRowDiv noResultsMessage">
+                        Your search had no results.
+                        </div>
+                    </li>
+                    
+                        <li class="ajaxListLI" id="appListRow_436580447">
+                                      <div class="ajaxListRowDiv " itemid="436580447">
+                  
+                    
+                    
+                       <div style="float:left;" class="ajaxListColumn ajaxListColumnInternal ajaxListColumn_1 ajaxListRowDivActionable ajaxListRowDivColumnActionLightbox">
+                    
+                    
+                    
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                         
+                            <img src="itunes_icloud_legal_files/mzi.jpg" class="ajaxListItemRowImage ajaxListItemRowImageDisplay">
+                         
+                         
+                         &nbsp;
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                    
+                    
+                    </div>
+                  
+                  
+                    
+                    
+                       <div style="float:left;" class="ajaxListColumn ajaxListColumnInternal ajaxListColumn_2 ajaxListSearchable ajaxListRowDivActionable ajaxListRowDivColumnActionLightbox">
+                    
+                    
+                    
+                       
+                       
+                         
+                          app name
+                         
+                         
+                         
+                         &nbsp;
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                    
+                    
+                    </div>
+                  
+                  
+                    
+                    
+                    
+                       <div style="display:block;" class="ajaxListColumn ajaxListColumnLast ajaxListColumn_3 ajaxListRowDivActionable ajaxListRowDivColumnActionLightbox">
+                    
+                    
+                       
+                       
+                         
+                           417324976
+                         
+                         
+                         
+                         &nbsp;
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                    
+                    
+                    
+                    &nbsp;
+                    
+                    </div>
+                  
+                  
+              
+              </div>
+              <div class="ajaxListRowSpinner" itemid="436580447" style="display:none;"><img src="itunes_icloud_legal_files/spinner16-transparent.gif"> Processing ... </div>
+                        </li>
+                    
+                        <li class="ajaxListLI" id="appListRow_428225942">
+                                      <div class="ajaxListRowDiv " itemid="428225942">
+                  
+                    
+                    
+                       <div style="float:left;" class="ajaxListColumn ajaxListColumnInternal ajaxListColumn_1 ajaxListRowDivActionable ajaxListRowDivColumnActionLightbox">
+                    
+                    
+                    
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                         
+                            <img src="itunes_icloud_legal_files/mzl.jpg" class="ajaxListItemRowImage ajaxListItemRowImageDisplay">
+                         
+                         
+                         &nbsp;
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                    
+                    
+                    </div>
+                  
+                  
+                    
+                    
+                       <div style="float:left;" class="ajaxListColumn ajaxListColumnInternal ajaxListColumn_2 ajaxListSearchable ajaxListRowDivActionable ajaxListRowDivColumnActionLightbox">
+                    
+                    
+                    
+                       
+                       
+                         
+                           app name 2
+                         
+                         
+                         
+                         &nbsp;
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                    
+                    
+                    </div>
+                  
+                  
+                    
+                    
+                    
+                       <div style="display:block;" class="ajaxListColumn ajaxListColumnLast ajaxListColumn_3 ajaxListRowDivActionable ajaxListRowDivColumnActionLightbox">
+                    
+                    
+                       
+                       
+                         
+                           408356359
+                         
+                         
+                         
+                         &nbsp;
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                    
+                    
+                    
+                    &nbsp;
+                    
+                    </div>
+                  
+                  
+              
+              </div>
+              <div class="ajaxListRowSpinner" itemid="428225942" style="display:none;"><img src="itunes_icloud_legal_files/spinner16-transparent.gif"> Processing ... </div>
+                        </li>
+                    
+               </ul>
+        </span>  
+    
+</div>
+    
+
+      </div>
+    
+   </div>
+   <div class="bottom"></div> 
+</div>
+  </div>
+        
+</span>
+</div>
+
+                    
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+        <td background="itunes_icloud_legal_files/wrapper_19.png" height="12" valign="top" width="4"><img src="itunes_icloud_legal_files/wrapper_14.png" alt="" height="12" width="4"></td>
+    </tr>
+    <tr>
+        <td background="itunes_icloud_legal_files/wrapper_17.png" width="4"></td>
+        <td background="itunes_icloud_legal_files/wrapper_19.png" width="4"></td>
+    </tr>
+    <tr>
+        <td><img src="itunes_icloud_legal_files/wrapper_22.png" alt="" height="5" width="4"></td>
+        <td background="itunes_icloud_legal_files/wrapper_23.png" height="5"></td>
+        <td><img src="itunes_icloud_legal_files/wrapper_25.png" alt="" height="5" width="4"></td>
+    </tr>
+</tbody></table>
+
+                
+                                      
+	        
+    </td>
+    <td background="itunes_icloud_legal_files/wrapper_15.png" width="8"></td>
+    </tr>
+    <tr>
+        <td width="8"><img src="itunes_icloud_legal_files/wrapper_bottoml.png" alt="" height="41" width="8"></td>
+            <td background="itunes_icloud_legal_files/wrapper_bottom.png" height="41" width="*">
+            <span id="lcBoxWrapperFooterUpdateContainer" class="lcAjaxContainer" action="/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.19" errorid="ajaxContainerError">
+	               <span class="wrapper-right-button">
+    
+
+	    
+	        <input onclick="disableLCPageButton('submitActionButton');" class="submitActionButton" name="0.0.9.7.3.1.1.1.19.1.0.1.1.1" src="itunes_icloud_legal_files/btn-blue-submit.png" border="0" type="image">
+	        
+	            <img class="submitActionButton-disabled" style="display: none;" src="itunes_icloud_legal_files/btn-blue-submit.png" border="0">
+	        
+	    
+	    	    
+
+	
+
+		
+
+
+</span>
+	               <span class="wrapper-left-button">
+</span>
+	            </span>
+            </td>
+        <td width="8"><img src="itunes_icloud_legal_files/wrapper_bottomr.png" alt="" height="41" width="8"></td>
+    </tr>
+
+</tbody></table>
+	    </form>
+	
+	
+	
+	   
+	   
+
+              </td>
+            </tr>
+            
+          
+</tbody></table>
+          
+  <div class="footerLinks" align="center"><a href="https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/wo/2.0.0.11.0.1">Home</a>
+     
+     | <a href="https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/wa/jumpTo?page=faqs">FAQs</a>
+     | <a href="https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/wo/2.0.0.11.0.3.0.0.3.1">Contact Us</a>
+    
+    
+      
+ | <a href="https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/wo/2.0.0.11.0.5">Sign Out</a></div>
+ <div class="footerCopyright" align="center">Copyright © 2011 Apple Inc. All rights reserved. <a href="https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/wo/2.0.0.11.0.9">Terms of Service</a> | <a href="http://www.apple.com/legal/privacy/">Privacy Policy</a></div><br>
+ 
+
+
+        </td>
+      </tr>
+    </tbody></table>
+  
+
+
+<script type="text/javascript">
+  //<![CDATA[
+     
+     function updateApps(){
+        LCAjaxContainer.update('appContainer');
+     }
+     
+        
+    function updateQuestion(){
+      LCAjaxContainer.submitWithFollowup('questionContainer',updateApps);
+      if ($('stateradio').checked) {
+        $('legal-quest-list').style.display = "block";
+      } else {
+        $('legal-quest-list').style.display = "none";
+      }
+    }
+    
+      //]]>
+</script><div id="appListLightboxLightboxWrapper">
+        <div id="appListLightbox" class="lcAjaxLightbox" style="display:none" action="/WebObjects/iTunesConnect.woa/wo/2.0.0.9.7.3.1.1.1.11.1.1.11.1.3.1.1.1.1.53.5"></div>
+        <div id="appListLightbox-white-overlay" class="lightbox-white-overlay" style="display:none"></div>
+    </div></body></html>

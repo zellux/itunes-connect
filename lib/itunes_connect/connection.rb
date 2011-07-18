@@ -210,7 +210,7 @@ module ItunesConnect
       page = client.get(LOGIN_URL)
 
       while true do
-        debug_msg("logging in")
+        debug_msg("logging in as #{@username}")
         page = page.form_with(:name => 'appleConnectForm') do |form|
           raise "login form not found" unless form
 
@@ -234,11 +234,28 @@ module ItunesConnect
         break  # done logging in
       end
 
+      # skip past legal issue questions
+      legal_issue = page.body.match(/may have a legal issue/)
+      if legal_issue
+        debug_msg("skipping past legal issue question")
+        input_submit = page.body.match(/<input .*?name="(.*?)".*?type="image"/)
+        raise "could not find submit button" unless input_submit
+
+        page = page.form_with(:name => 'mainForm') do |form|
+          raise "legal issues form not found" unless form
+
+          form['hasLegalIssues'] = 'false'
+          form[input_submit[1] + '.x'] = '58'
+          form[input_submit[1] + '.y'] = '8'
+        end.submit
+        dump(client, page)
+      end
+
       # skip past new license available notifications
       new_license = page.body.match(/Agreement Update/)
       if new_license
         debug_msg("agreement update detected, skipping")
-        next_url = page.body.match(/a href="(.*?)">\s*<img[^>]+src="\/itc\/images\/btn-continue.png"/)
+        next_url = page.body.match(/a href="(.*?)">\s*<img[^>]+src=".*?\/itc\/images\/btn-continue.png"/)
         raise "could not determine continue url" unless next_url
         continue_link = page.link_with(:href => next_url[1])
         raise "could not find continue link" unless continue_link
