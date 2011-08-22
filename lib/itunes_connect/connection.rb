@@ -3,6 +3,7 @@ require "tempfile"
 require "yaml"
 require "zlib"
 require "rubygems"
+require 'iconv'
 gem 'mechanize'
 require "mechanize"
 
@@ -138,7 +139,10 @@ module ItunesConnect
       # (selection options exist even when the report isn't available, so
       #  we need to do another check here)
       dump(client, page)
-      available = !page.body.match(/There is no report available for this selection/)
+      
+      ic = Iconv.new('UTF-8//IGNORE', 'UTF-8')
+      pagebody = ic.iconv(page.body)
+      available = !pagebody.match(/There is no report available for this selection/)
       unless available
         raise ArgumentError, "No #{period} reports are available for #{date_str}"
       end
